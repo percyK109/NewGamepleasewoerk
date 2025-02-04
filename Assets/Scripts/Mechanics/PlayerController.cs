@@ -26,7 +26,7 @@ namespace Platformer.Mechanics
         /// <summary>
         /// Initial jump velocity at the start of a jump.
         /// </summary>
-        public float jumpTakeOffSpeed = 3;
+        public float jumpTakeOffSpeed = 1;
 
         public JumpState jumpState = JumpState.Grounded;
         private bool stopJump;
@@ -81,6 +81,7 @@ namespace Platformer.Mechanics
             UpdateJumpState();
             base.Update();
         }
+        
 
         void UpdateJumpState()
         {
@@ -104,6 +105,8 @@ namespace Platformer.Mechanics
                     {
                         Schedule<PlayerLanded>().player = this;
                         jumpState = JumpState.Landed;
+                        stopJump = false;
+
                     }
                     break;
                 case JumpState.Landed:
