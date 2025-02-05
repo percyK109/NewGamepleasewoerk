@@ -39,11 +39,17 @@ EditorBuildSettings:
     path: Assets/Scenes/TYPERVIC.unity
     guid: 9e7ff592e7040a74b9c1d681ac75165e
   - enabled: 1
+    path: Assets/Scenes/startover.unity
+    guid: 143f51e3b50e55643bdd27638f054864
+  - enabled: 1
     path: Assets/Scenes/SampleScene.unity
     guid: 2cda990e2423bbf4892e6590ba056729
   - enabled: 1
     path: Assets/Scenes/optionsmenu.unity
     guid: e03b68011cc721b4f9a34ec91c90e8b8
+  - enabled: 1
+    path: Assets/Scenes/cat redop.unity
+    guid: 667637b13c3fbab459a10d7f119625eb
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 5e716bb9195b9eb49a2ccb4c51691dc6,
       type: 3}

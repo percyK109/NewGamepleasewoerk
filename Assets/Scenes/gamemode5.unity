@@ -119,6 +119,52 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &47262295
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 47262297}
+  - component: {fileID: 47262296}
+  m_Layer: 0
+  m_Name: GameObject
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &47262296
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 47262295}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5e2e8672f43438e4b9ad1863b4c0df58, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  inputField: {fileID: 921458181}
+  correctWord: Lollipop
+--- !u!4 &47262297
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 47262295}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 2260.0037, y: 287.05438, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &161673978
 GameObject:
   m_ObjectHideFlags: 0
@@ -843,7 +889,19 @@ MonoBehaviour:
   m_CharacterLimit: 0
   m_OnEndEdit:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 11500000, guid: 5e2e8672f43438e4b9ad1863b4c0df58, type: 3}
+        m_TargetAssemblyTypeName: 
+        m_MethodName: 
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   m_OnSubmit:
     m_PersistentCalls:
       m_Calls: []
@@ -1211,7 +1269,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   TimeLeft: 0
   TimerOn: 1
-  TimeLimit: 0
   TimerTxt: {fileID: 0}
 --- !u!328 &1298434439
 VideoPlayer:
@@ -1465,9 +1522,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 68842da0724eb1749a6ac3a160a7c0c5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  TimeLeft: 80
-  TimerOn: 0
-  TimeLimit: 0
+  TimeLeft: 3
+  TimerOn: 1
   TimerTxt: {fileID: 195393035}
 --- !u!1 &1849249031
 GameObject:
@@ -1716,7 +1772,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'TYPE: LOLIPOP'
+  m_text: 'TYPE: LOLLIPOP'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8ebfeea7062344f0c96b8a1d614a92b1, type: 2}
   m_sharedMaterial: {fileID: 21204982835221424, guid: 8ebfeea7062344f0c96b8a1d614a92b1,
@@ -1805,9 +1861,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 1905365054}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4cd32bc73292d3b4a958ccbc200bd548, type: 3}
+  m_Script: {fileID: 11500000, guid: 5e2e8672f43438e4b9ad1863b4c0df58, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  inputField: {fileID: 921458181}
+  correctWord: Lollipop
 --- !u!1 &1988122138
 GameObject:
   m_ObjectHideFlags: 0
@@ -1845,7 +1903,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 244, y: -165}
+  m_AnchoredPosition: {x: 243, y: -165}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1988122140
@@ -1892,14 +1950,14 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1988122143}
-        m_TargetAssemblyTypeName: ChangeScene, Assembly-CSharp
-        m_MethodName: MoveToScene
-        m_Mode: 3
+      - m_Target: {fileID: 47262296}
+        m_TargetAssemblyTypeName: SceneTransition2, Assembly-CSharp
+        m_MethodName: OnButtonClick
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 10
+          m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -1951,9 +2009,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 1988122138}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b9b18e0c5a8b94548807e23e1ef12bb8, type: 3}
+  m_Script: {fileID: 11500000, guid: 5e2e8672f43438e4b9ad1863b4c0df58, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  inputField: {fileID: 921458181}
+  correctWord: Lollipop
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
@@ -1962,3 +2022,4 @@ SceneRoots:
   - {fileID: 333541042}
   - {fileID: 1298434437}
   - {fileID: 565453262}
+  - {fileID: 47262297}

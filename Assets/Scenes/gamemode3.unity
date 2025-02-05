@@ -1249,12 +1249,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 1496943332}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 68842da0724eb1749a6ac3a160a7c0c5, type: 3}
+  m_Script: {fileID: 11500000, guid: 5b68efcef3bd3f7459d8de4d2ae0b29b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  TimeLeft: 80
-  TimerOn: 1
-  TimeLimit: 1
+  TimeLeft: 10
+  TimerOn: 0
   TimerTxt: {fileID: 327910696}
 --- !u!1 &1831143711
 GameObject:
